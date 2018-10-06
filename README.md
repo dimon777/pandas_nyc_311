@@ -4,7 +4,7 @@ This demonstraits:
 - Using jupyter notebook to execute simple analytic pipeline on 311 dataset
 
 
-### Step 1: Provision AWS instance with Terraform:
+### Step 1: Provision AWS instance with Terraform (this is done on local machine)
 
 - Pick Ubuntu instance at [Ec2 locator](https://cloud-images.ubuntu.com/locator/ec2/)
 - Go to: [IAM home](https://console.aws.amazon.com/iam/home)
@@ -50,7 +50,7 @@ terraform apply
 
 - In [AWS Console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#KeyPairs:sort=keyName) create Key Pair
 ```
--> Create Key Pair -> Note location of pem file
+-> Create Key Pair -> Name: aws_key.pem -> Note location of the pem file: `aws_key.pem`
 ```
 
 - Verify SSH connection to your instance
@@ -59,6 +59,12 @@ ssh -i "aws_key.pem" ubuntu@<instance public IP>
 ```
 
 
+### Step 2: Execute simple data pipeline (this is done on AWS instance)
+
+- Clone [this repo](https://github.com/dimon777/pandas_nyc_311)
+```
+git clone https://github.com/dimon777/pandas_nyc_311
+```
 
 ### Requirements:
 pip3 install -r requirements.txt # --user
