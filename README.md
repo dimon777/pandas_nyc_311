@@ -73,3 +73,8 @@ sudo apt install python3-pip
 pip3 install -r requirements.txt --user
 ```
 
+- Start Jupyter, navigate to notebook url and execute notebook
+```
+jupyter notebook --ip=0.0.0.0
+```
+
