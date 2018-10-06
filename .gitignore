@@ -14,6 +14,7 @@ website/node_modules
 *.backup
 ./*.tfstate
 .terraform/
+.ipynb_checkpoints/
 *.log
 *.bak
 *~

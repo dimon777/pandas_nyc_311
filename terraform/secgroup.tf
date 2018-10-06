@@ -1,5 +1,5 @@
-resource "aws_security_group" "dmitry_access" {
-  name        = "dmitry_access"
+resource "aws_security_group" "311_access" {
+  name        = "311_access"
   description = "Allow inbound SSH traffic"
 
   ingress {
@@ -10,6 +10,6 @@ resource "aws_security_group" "dmitry_access" {
   }
 
   tags {
-    Name = "dmitry_instance"
+    Name = "instance_311"
   }
 }
