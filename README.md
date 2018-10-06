@@ -17,7 +17,7 @@ Users -> select your username -> Security credentials -> Create Access Key -> Re
 Users -> select your username -> Add permissions -> Add to AdministratorAccess group
 ```
 
-#### Edit files to add required keys and secrets:
+- Edit files to add required keys and secrets:
 ```
 ~/.aws/credentials
 [default]
@@ -29,19 +29,35 @@ aws_secret_access_key = YOUR_SECRET
 region=us-east-1
 ```
 
+- Clone [this repo](https://github.com/dimon777/pandas_nyc_311)
+```
+git clone https://github.com/dimon777/pandas_nyc_311
+```
+
+- Install [Terraform](https://www.terraform.io/intro/getting-started/install.html)
+
+- Create AWS instance and security group with Terraform
+```
 cd terraform
 terraform init
 terraform apply
+```
 
-https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#KeyPairs:sort=keyName
+- In [AWS Console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceId) add instance into new Security Group (311_access) 
+```
+-> Instance -> Actions -> Netoworking -> Change Security Groups -> 311_access
+```
+
+- In [AWS Console](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#KeyPairs:sort=keyName) create Key Pair
+```
 -> Create Key Pair -> Note location of pem file
+```
 
-cd terraform
-terraform init
-terraform apply
+- Verify SSH connection to your instance
+```
+ssh -i "aws_key.pem" ubuntu@<instance public IP>
+```
 
-https://console.aws.amazon.com/ec2/v2/home?region=us-east-1#Instances:sort=instanceId
--> Instance -> Actions -> Netoworking -> Change Security Groups -> dmitry_access
 
 
 ### Requirements:
