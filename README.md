@@ -1,19 +1,18 @@
 # Pandas demo on NYC 311 datasets
-## This demonstraits:
-## - Creating AWS instance with Terraform
-## - Using jupyter notebook to execute simple analytic pipeline on 311 dataset
+This demonstraits:
+- Creating AWS instance with Terraform
+- Using jupyter notebook to execute simple analytic pipeline on 311 dataset
 
 
 ### Step 1: Provision AWS instance with Terraform:
 
-#### Pick Ubuntu instance at [Ec2 locator](https://cloud-images.ubuntu.com/locator/ec2/)
-
-#### Go to: [IAM home](https://console.aws.amazon.com/iam/home)
-#### Create security credentials:
+- Pick Ubuntu instance at [Ec2 locator](https://cloud-images.ubuntu.com/locator/ec2/)
+- Go to: [IAM home](https://console.aws.amazon.com/iam/home)
+- Create security credentials:
 ```
 Users -> select your username -> Security credentials -> Create Access Key -> Record access key id and secret_access_key
 ```
-#### Add yourself to Admin group:
+- Add yourself to Admin group:
 ```
 Users -> select your username -> Add permissions -> Add to AdministratorAccess group
 ```
