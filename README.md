@@ -67,4 +67,9 @@ git clone https://github.com/dimon777/pandas_nyc_311
 ```
 
 ### Requirements:
-pip3 install -r requirements.txt # --user
+- Install required O/S and Python packages
+```
+sudo apt install python3-pip
+pip3 install -r requirements.txt --user
+```
+
